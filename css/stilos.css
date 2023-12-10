@@ -1,0 +1,298 @@
+/* colores 
+primario: #F05941
+secundario:#BE3144
+terciario: #872341
+fondo:#22092C */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+body{
+    background: #22092C;
+    margin: 0%;
+    padding: 0%;
+    font-family: Rock Salt, cursive, sans-serif;
+}
+
+#menu{
+    position:absolute;
+    display: inline;
+    margin: 0%;
+    padding: 0%;
+    top: 2%;
+    left: 30%;
+    z-index: 100;
+}
+
+ul,li{
+    position: relative;
+    display: inline;
+    list-style: none;
+    color: #F05941;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+a{
+    color: #F05941;   
+    text-decoration: none;
+}
+
+a:hover{
+    color:#872341;
+    transition: 0.3s ease;
+}
+
+h1{
+   color: #F05941;
+   font-weight: bold;
+   text-align: center;
+   
+   font-size: 70px;
+   
+}
+
+#formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background: #872341;
+    width: 20rem;
+    height: 12rem;
+}
+
+#acceso{
+position: relative;
+display: block;
+margin-top: 1.5rem;
+text-align: center;
+color: beige;
+}
+
+input{
+    margin-bottom: 1rem;
+    border-style: none;
+    width: 80%;
+    padding: 2%;
+    border-radius: 50px;
+    text-align: center;
+    cursor: text; 
+    color: #22092C;
+    font-weight: bold;
+    background: #BE3144;
+}
+
+label{
+    color: #22092C;
+    font-family: Rock Salt;
+    font-weight: bold; 
+}
+
+
+input:focus{
+    text-align: left;
+    background: #F05941;
+    color: #22092C;
+    font-family: Rock Salt;
+    border-style: none;
+}
+
+input::placeholder{
+    color: #22092C;
+    font-family: Rock Salt;
+    font-weight: bold;
+}
+
+#mostrar{
+    padding: 0%;
+    width: 10%;
+    cursor: pointer;
+    align-items: start;
+}
+
+#btn{
+    border-style: none;
+    width: 85%;
+    padding: 2%;
+    border-radius: 50px;
+    color: #22092C;
+    font-family: Rock Salt;
+    font-weight: bold;
+    background: #BE3144;
+    cursor: pointer; 
+}
+
+#btn:hover{
+    background: #F05941;
+
+}
+
+#btn1{
+    border-style: none;
+    padding: 2%;
+    width: 10rem;
+    border-radius: 50px;
+    color: #22092C;
+    font-family: Rock Salt;
+    font-weight: bold;
+    background: #BE3144;
+    cursor: pointer; 
+}
+#btn1:hover{
+    background: #F05941;
+}
+
+#reintentar, #volver{
+    border-style: none;
+    padding: 2%;
+    width: 50%;
+    margin-bottom: 1rem;
+    border-radius: 50px;
+    color: #22092C;
+    font-family: Rock Salt;
+    font-weight: bold;
+    background: #BE3144;
+    cursor: pointer; 
+}
+
+#reintentar:hover, #volver:hover{
+    background: #F05941;
+}
+
+.bienvenido{
+    position:absolute;
+    color: #F05941;
+    display: block;
+    top: 5%;
+    left: 40%;
+}
+
+.mensajeError{
+    position:absolute;
+    background:#F05941;
+    color: #22092C;
+    display: block;
+    top: 70%;
+    left: 25%;
+}
+
+
+#canvas{
+    background: #22092C;
+    width: 100%;
+    position: absolute;
+    display: none;
+    color: #F05941;
+}
+#select{
+    background: #22092C;
+    width: 100%;
+    position: absolute;
+    display: none;
+    color: #F05941;
+}
+
+#opciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 8rem;
+}
+
+
+.card {
+    width: 18rem;
+    margin-bottom: 2rem;
+    border: 2px solid #BE3144;
+    border-radius: 0.25rem; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.5s;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: 2em;
+    
+}
+
+.card:hover{
+    transform: scale(1.10);
+    opacity: 1;
+    background: rgba(135, 35, 65, 0.4);
+}
+#popup{
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #F05941;
+    background: rgba(135, 35, 65, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-content {
+background: #22092C;
+padding: 20px;
+border-radius: 8px;
+text-align: center;
+color: #F05941;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#control{
+    width: 25%;
+    height: 25%;
+}
+
+.mensaje{
+    position:absolute;
+    color: #F05941;
+    display: block;
+    top: 15%;
+    left: 50%;
+    background-color: #872341;
+}
+
+#fin{
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #F05941;
+    background: rgba(135, 35, 65, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+#fin-content {
+    background: #22092C;
+    padding: 20px;
+    border-radius: 8px;
+    color: #F05941;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }

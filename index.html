@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DrumIt</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/stilos.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+      </head>
+    <body>
+      <nav id=menu>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a onclick="verCanciones()">Canciones</a></li>
+          <li><a onclick="popUp()">Instrucciones</a></li>
+          <li><a id="parar"><i class="fa-solid fa-pause"></i> / <i class="fa-solid fa-play"></i></a></li>
+          <li><a id="stop"><i class="fa-solid fa-stop"></i></a></li>
+        </ul>
+      </nav>
+
+      <h1 id="titulo">DrumIt</h1>
+
+      <div id="formulario">
+        <form id="acceso">
+          <label for="username"></label>
+          <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+          <label for="password"></label>
+          <input type="password" name="password" id="password" placeholder="Contraseña"><br>
+          <label for="mostrar">
+            <input type="checkbox" name="mostrar" id="mostrar" onclick="mostrarContraseña()"> <i class="fa-solid fa-lock"></i>
+          </label>
+          <button type="button" id="btn" onclick="iniciarSesion()"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</button>
+         </form>
+      </div>
+     
+
+    <canvas id="canvas"></canvas>
+    
+    <div id="select">
+      <div id=opciones>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/BeatIt.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Michael Jackson</h5>
+          <p class="card-text">Beat it</p>
+          <button id="btn" onclick="jugar(0)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/breakFree.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Queen</h5>
+          <p class="card-text">I want to break free</p>
+          <button id="btn" onclick="jugar(1)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/livinonaprayer.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bon Jovi</h5>
+          <p class="card-text">Livin' on a prayer</p>
+          <button id="btn" onclick="jugar(2)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/blondie-one-way-or-another.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Blondi</h5>
+          <p class="card-text">One way or another</p>
+          <button id="btn" onclick="jugar(3)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/images/sbtl_qtg.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Queen</h5>
+          <p class="card-text">Somebody to love</p>
+          <button id="btn" onclick="jugar(4)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/images/raiseyourglass.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">P!nk</h5>
+          <p class="card-text">Raise your glass</p>
+          <button id="btn" onclick="jugar(5)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/images/loverockandroll.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Joan Jett</h5>
+          <p class="card-text">I Love Rock 'N Roll</p>
+          <button id="btn" onclick="jugar(6)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/images/The_Scientist.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Coldplay</h5>
+          <p class="card-text">The Scientist</p>
+          <button id="btn" onclick="jugar(7)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="assets/images/vivalavida.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Coldplay</h5>
+          <p class="card-text">Viva la vida</p>
+          <button id="btn" onclick="jugar(8)"><i class="fa-solid fa-circle-play fa-4x"></i></button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div id="popup">
+      <div id="popup-content">
+          <h2>Instrucciones del Juego</h2>
+          <p>Puedes jugar con un mando o con el teclado, la decisión es tuya.</p>
+          <p>Controles del teclado:</p>
+          <img id="control1" src="/assets/images/teclado.png">
+          <p>Controles del mando:</p>
+          <img id="control" src="/assets/images/mando.png">
+          <p>Funcionamiento:</p>
+          <p>Pulsa la tecla del color correcto para ganar puntos.</p>
+          <button id="btn1"><i class="fa-solid fa-x fa-4x"></i></button>
+        </div>
+  </div>
+
+  <div id="fin">
+    <div id="fin-content">
+        <h2>Puntuación Final es: <h2 id=score></h2></h2>
+         <h2 id=resultado></h2>
+        
+        <button id="reintentar"><i class="fa-solid fa-rotate-right fa-3x"></i>  Reintentar</button>
+        <button id="volver"><i class="fa-solid fa-left-long fa-3x"></i> Volver al Inicio</button>
+      </div>
+</div>
+
+        <script src="https://kit.fontawesome.com/7ee3973043.js" crossorigin="anonymous"></script>
+        <script src="js/game.js" async defer></script>
+        <script src="js/index.js" async defer></script>
+    </body>
+</html>
