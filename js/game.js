@@ -100,7 +100,7 @@ class Notes {
         this.radio = 20;
         this.color = color;
         this.colorBorde = "#22092C";
-        this.speed = 6;
+        this.speed = 3;
         this.distance;
     };
     velocidadNota() {
@@ -150,7 +150,7 @@ function getRandomPosy(color) {
 
 function añadirNota() {
 
-    if (gameframe % 50 == 0) {
+    if (gameframe % 70 == 0) {
         const randomColor = getRandomColor();
         const randomPosy = getRandomPosy(randomColor);
         notas.push(new Notes(randomPosy, randomColor));
