@@ -8,7 +8,7 @@ canvas.height = window.innerHeight;
 //cargar las canciones en objeto canciones
 
 var canciones = {
-    0: new Audio("/assets/music/BeatIt.mp3"),
+    0: new Audio("./assets/music/BeatIt.mp3"),
     1: new Audio("/assets/music/IWanttoBreakFree.mp3"),
     2: new Audio("/assets/music/LivinOnAPrayer.mp3"),
     3: new Audio("/assets/music/Onewayoranother.mp3"),
