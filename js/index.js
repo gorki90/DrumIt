@@ -15,7 +15,7 @@ var resultado=document.getElementById("resultado");
 
 var users=[];
 var usuarios="model/usuarios.json";
-const audio=new Audio("/assets/music/intro.mp3");
+const audio=new Audio("./assets/music/intro.mp3");
 
 function cargarUsuarios(usuarios){
 
