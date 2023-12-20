@@ -9,14 +9,14 @@ canvas.height = window.innerHeight;
 
 var canciones = {
     0: new Audio("./assets/music/BeatIt.mp3"),
-    1: new Audio("/assets/music/IWanttoBreakFree.mp3"),
-    2: new Audio("/assets/music/LivinOnAPrayer.mp3"),
-    3: new Audio("/assets/music/Onewayoranother.mp3"),
-    4: new Audio("/assets/music/SomebodyToLove.mp3"),
-    5: new Audio("/assets/music/RaiseYourGlass.mp3"),
-    6: new Audio("/assets/music/ILoveRocknRoll.mp3"),
-    7: new Audio("/assets/music/TheScientist.mp3"),
-    8: new Audio("/assets/music/Viva La Vida.mp3"),
+    1: new Audio("./assets/music/IWanttoBreakFree.mp3"),
+    2: new Audio("./assets/music/LivinOnAPrayer.mp3"),
+    3: new Audio("./assets/music/Onewayoranother.mp3"),
+    4: new Audio("./assets/music/SomebodyToLove.mp3"),
+    5: new Audio("./assets/music/RaiseYourGlass.mp3"),
+    6: new Audio("./assets/music/ILoveRocknRoll.mp3"),
+    7: new Audio("./assets/music/TheScientist.mp3"),
+    8: new Audio("./assets/music/Viva La Vida.mp3"),
 }
 
 var notas = [];
@@ -59,7 +59,7 @@ function dibujarTablero() {
         ctx.strokeStyle = "#872341";
         ctx.lineCap = "round";
         ctx.beginPath();
-        ctx.moveTo(posXinicial, canvas.height-87);
+        ctx.moveTo(posXinicial, 600);
         ctx.lineTo(posXinicial, 200);
         posXinicial += 200;
     }
